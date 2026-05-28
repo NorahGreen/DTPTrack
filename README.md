@@ -115,7 +115,7 @@ Note: Our code performs evaluation automatically when model training is complete
 # Train and evaluate on specific GPUs
 ./run.sh DTPTrack Base --output_dir /path/to/output --device_ids 0,1,2,3
 # Train and evaluate on multiple nodes
-./run.sh DTPTrack BBase --output_dir /path/to/output --nnodes $num_nodes --node_rank $node_rank --master_address $master_node_ip --date 2024.03.07-04.59.08-976343
+./run.sh DTPTrack Base --output_dir /path/to/output --nnodes $num_nodes --node_rank $node_rank --master_address $master_node_ip --date 2024.03.07-04.59.08-976343
 ```
 You can set the default settings, e.g. `output_dir`, in ```run.sh```.
 ### Call main.py directly
