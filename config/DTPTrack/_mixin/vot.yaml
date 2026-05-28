@@ -1,0 +1,13 @@
+!concat
+- !include "evaluation.yaml"
+- - path: "run.data.eval.type"
+    value: "siamese_tracker_eval_vot"
+  - path: "run.profiling.enabled"
+    value: false
+  - path: "run.data.eval"
+    action: "merge"
+    value:
+      region_format: "rectangle"
+  - path: "run"
+    action: "remove"
+    value: "checkpoint"

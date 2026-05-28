@@ -1,0 +1,3 @@
+- path: "run.profiling.enabled"
+  value: false
+  comment: "Disable profiling for the run. This is useful for debugging or when profiling is not needed."

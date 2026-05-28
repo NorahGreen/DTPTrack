@@ -1,0 +1,105 @@
+# Misc Settings
+num_train_workers: 6
+num_val_workers: 6
+num_eval_workers: 4
+num_io_threads_per_worker: 1
+on_shared_file_system: false
+monitor_system_resources: true
+monitor_system_health_sensors: false
+use_safetensors: true
+
+# Dataset Paths
+## LaSOT
+LaSOT_PATH: ''
+LaSOT_Extension_PATH: ''
+
+GOT10k_PATH: ''
+
+TrackingNet_PATH: ''
+
+UAV123_PATH: ''
+
+TNL2K_TRAIN_PATH: ''
+TNL2K_TEST_PATH: ''
+
+COCO_2014_PATH: ''
+COCO_2017_PATH: ''
+
+OTB_PATH: ''
+NFS_PATH: ''
+
+VastTrack_TRAIN_PATH: ''
+VastTrack_TEST_PATH: ''
+
+VOTS2023_PATH: ''
+VOT_TESTS_MULTIOBJECT_PATH: ''
+
+ILSVRC_VID_PATH: ''
+ILSVRC_DET_PATH: ''
+AIC19_Track1_PATH: ''
+HMDB51_PATH: ''
+HMDB51_ANNOTATION_PATH: ''
+MOT17_PATH: ''
+MOT20_PATH: ''
+Olympic_Sports_PATH: ''
+Olympic_Sports_Annotation_PATH: ''
+UAV_Benchmark_M_PATH: ''
+UCF101_PATH: ''
+# http://www.thumos.info/download.html
+UCF101_THUMOS_2015_HUMAN_ANNOTATION: ''
+Youtube_BB_PATH: ''
+DeformSOT_PATH: ''
+DTB70_PATH: ''
+NUSPRO_PATH: ''
+PTB_PATH: ''
+TempleColor_PATH: ''
+UAVBenchmarkS_PATH: ''
+VOT2015_PATH: ''
+Cityscapes_PATH: ''
+CityPersons_Annotation_PATH: ''
+KITTI_Detection_PATH: ''
+WebCamT_PATH: ''
+KITTI_Tracking_Image_PATH: ''
+KITTI_Tracking_Label_PATH: ''
+VisDrone_2019_DET_Train_PATH: ''
+VisDrone_2019_DET_Val_PATH: ''
+VisDrone_2019_DET_Test_PATH: ''
+
+VisDrone_2019_MOT_Train_PATH: ''
+VisDrone_2019_MOT_Val_PATH: ''
+VisDrone_2019_MOT_Test_PATH: ''
+
+VisDrone_2019_SOT_Train_PATH: ''
+VisDrone_2019_SOT_Val_PATH: ''
+VisDrone_2019_SOT_Test_PATH: ''
+Open_Images_PATH: ''
+BDD100k_PATH: ''
+ALOV300++_Frames_PATH: ''
+ALOV300++_Annotation_PATH: ''
+
+CrowdHuman_PATH: ''
+PathTrack_PATH: ''
+SegTrack_PATH: ''
+SegTrackV2_PATH: ''
+Youtube_VIS_PATH: ''
+LVIS_Annotation_PATH: ''
+WiderFace_PATH: ''
+ImageNet-21k_PATH: ''
+VOT2020ST_PATH: ''
+VOT2022STB_PATH: ''
+VOT_Testing_PATH: ''
+
+# Access Keys
+HF_TOKEN: ''
+WANDB_API_KEY: ''
+
+# Variables to adjust the behavior of external libraries
+## timm: prefer to use the old cached model weight on local disk
+TIMM_USE_OLD_CACHE: true
+
+dinov3_vits16_pretrain_lvd1689m_PATH: ''
+dinov3-vits16plus-pretrain-lvd1689m_PATH: ''
+dinov3-vitb16-pretrain-lvd1689m_PATH: ''
+dinov3-vitl16-pretrain-lvd1689m_PATH: ''
+dinov3-vith16plus-pretrain-lvd1689m_PATH: ''
+dinov3-vit7b16-pretrain-lvd1689m_PATH: ''

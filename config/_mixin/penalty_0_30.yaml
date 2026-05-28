@@ -1,0 +1,2 @@
+- path: "run.runner.test.evaluator.pipeline.post_process.window_penalty"
+  value: 0.30

@@ -1,0 +1,42 @@
+- path: "run.data.train.sampler.samples_per_epoch"
+  value: 64
+- path: "run.data.val.sampler.samples_per_epoch"
+  value: 64
+- path: "run.data.test.source.parameters"
+  value: !include "../_dataset/test_min.yaml"
+- path: "run.data.eval.source.parameters"
+  value: !include "../_dataset/test_min.yaml"
+- path: "run.data.test.result_collector.dispatch"
+  value:
+    - match:
+        name_regex: ".*"
+      handlers:
+        - type: "one_pass_evaluation_compatible"
+        - type: "external/PyTracking"
+          file_name: "results"
+- path: "run.data.eval.result_collector.dispatch"
+  value:
+    - match:
+        name_regex: ".*"
+      handlers:
+        - type: "one_pass_evaluation_compatible"
+        - type: "external/PyTracking"
+          file_name: "results"
+- path:
+    - "run.data.train.global_batch_size"
+    - "run.data.val.global_batch_size"
+  value: 8
+- path:
+    - "run.data.test.batch_size"
+    - "run.data.eval.batch_size"
+  value: 8
+- path: "run.num_epochs"
+  value: 3
+- path: "run.checkpoint"
+  value:
+    - type: "regular"
+      epoch_trigger:
+        interval: 1
+        last: true
+      resumable: false
+      exclude_frozen_parameters: true

@@ -1,0 +1,17 @@
+- path: "run.num_epochs"
+  value: 1
+- path: "run.profiling.enabled"
+  value: false
+- path: "run"
+  action: "remove"
+  value: "checkpoint"
+- path: "run.task"
+  action: "retain"
+  value: "train"
+- path: "run.data"
+  action: "retain"
+  value: "train"
+- path: "run.runner"
+  value:
+    train:
+      type: "dummy"

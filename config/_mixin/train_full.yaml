@@ -1,0 +1,31 @@
+- path: "run.data.train.source"
+  value:
+    type: "dataset"
+    parameters:
+      !include "../_dataset/train-full.yaml"
+- path: "run.data.train.sampler.weight"
+  value:
+    - match:
+        type: "dataset"
+        name_regex: "GOT-10k"
+      value: 1.0
+    - match:
+        type: "dataset"
+        name: "LaSOT"
+      value: 1.0
+    - match:
+        type: "dataset"
+        name: "TrackingNet"
+      value: 1.0
+    - match:
+        type: "dataset"
+        name_regex: "COCO"
+      value: 1.0
+    - match:
+        type: "dataset"
+        name: "VastTrack"
+      value: 1.0
+    - match:
+        type: "dataset"
+        name: "TNL2K"
+      value: 0.25

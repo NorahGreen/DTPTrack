@@ -1,0 +1,41 @@
+name: "DINOv2/B-378"
+
+logging:
+  category: "LoRATv3"
+  tags:
+    - "DINOv2"
+    - "base"
+    - "224"
+
+type: "DTPTrack"
+
+common:
+  template_size: [ 196, 196 ]
+  search_region_size: [ 378, 378 ]
+  template_feat_size: [ 14, 14 ]
+  search_region_feat_size: &search_region_feat_size [ 27, 27 ]
+  response_map_size: *search_region_feat_size
+  interpolation_mode: "bilinear"
+  interpolation_align_corners: false
+  normalization: "imagenet"
+
+model:
+  type: "DTPTrack"
+  with_cls_token: false
+  with_reg_token: false
+  backbone:
+    type: "timm"
+    parameters:
+      model_name: "vit_large_patch14_dinov2.lvd142m"
+      drop_path_rate: 0.1   
+  enable_aux_output: true
+  aux_output_multi_head: true
+  mlora:
+    r: 64
+    alpha: 64
+    dropout: 0.
+    lambda_num: 5
+    logging: false
+    init_method: "default"
+
+run: !include "run.yaml"

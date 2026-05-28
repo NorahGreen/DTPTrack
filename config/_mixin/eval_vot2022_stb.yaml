@@ -1,0 +1,11 @@
+!concat
+- !include "evaluation.yaml"
+- - path: "run.data.eval.source.parameters"
+    value: !include "../_dataset/test-vot2022-stb.yaml"
+  - path: "run.data.eval.result_collector.dispatch"
+    value:
+      - match:
+          name_regex: ".*"
+        handlers:
+          - type: "one_pass_evaluation_compatible"
+            file_name: "vot2022_stb_ope_results"
