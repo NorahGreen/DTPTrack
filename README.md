@@ -219,7 +219,7 @@ Now the training process will save checkpoints every 10 epochs, and the last che
 Load the last checkpoint by specifying the `--resume` argument:
 
 ```shell
-./run.sh DTPTrack B-224 --output_dir /path/to/output --mixin resumable --resume /path/to/output/run_id/checkpoint/recovery.yaml
+./run.sh DTPTrack Base --output_dir /path/to/output --mixin resumable --resume /path/to/output/run_id/checkpoint/recovery.yaml
 ```
 ## Citation
 ```bibtex
